@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jacoding | معرض أعمال مهندس برمجيات</title>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -389,11 +387,12 @@
             display: flex;
             align-items: center;
             gap: 0.8rem;
-            transition: border-color 0.3s;
+            transition: border-color 0.3s, transform 0.2s;
         }
 
         .info-item:hover {
             border-color: var(--accent-blue);
+            transform: translateY(-2px);
         }
 
         .info-item i {
@@ -508,12 +507,10 @@
 </head>
 <body>
 
-    <!-- زر واتساب العائم -->
-    <a href="https://wa.me/201103994188" class="whatsapp-float" target="_blank" title="تواصل معي عبر واتساب">
+    <a href="https://api.whatsapp.com/send?phone=201103994188" class="whatsapp-float" target="_blank" title="تواصل معي عبر واتساب">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- الهيدر -->
     <header>
         <div class="logo">jacoding</div>
         <div class="menu-btn" id="menuBtn">
@@ -527,19 +524,17 @@
         </ul>
     </header>
 
-    <!-- القسم الترحيبي -->
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>أهلاً بك، أنا مهندس برمجيات ومصمم <span>منصات رقمية</span></h1>
             <p>أقوم بتحويل الأفكار المعقدة إلى مواقع ويب وتطبيقات ذكية، احترافية، ومخصصة بالكامل لتلبية احتياجاتك واحتياجات طلاب التخرج.</p>
             <div class="cta-buttons">
                 <a href="#portfolio" class="btn btn-primary">رؤية أعمالي</a>
-                <a href="https://wa.me/201103994188" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> تواصل عبر واتساب</a>
+                <a href="https://api.whatsapp.com/send?phone=201103994188" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> تواصل عبر واتساب</a>
             </div>
         </div>
     </section>
 
-    <!-- قسم الخدمات -->
     <section id="services">
         <h2 class="section-title">ماذا أقدم؟</h2>
         <div class="services-grid">
@@ -561,7 +556,6 @@
         </div>
     </section>
 
-    <!-- قسم معرض الأعمال -->
     <section id="portfolio">
         <h2 class="section-title">معرض المشاريع والأعمال</h2>
         
@@ -573,7 +567,6 @@
         </div>
 
         <div class="portfolio-grid">
-            <!-- مشروع 1 -->
             <div class="portfolio-item" data-category="web">
                 <div class="project-img-placeholder"></div>
                 <div class="project-info">
@@ -587,7 +580,6 @@
                 </div>
             </div>
 
-            <!-- مشروع 2 -->
             <div class="portfolio-item" data-category="app">
                 <div class="project-img-placeholder" style="background: linear-gradient(45deg, #0f172a, #0369a1);"></div>
                 <div class="project-info">
@@ -601,7 +593,6 @@
                 </div>
             </div>
 
-            <!-- مشروع 3 -->
             <div class="portfolio-item" data-category="grad">
                 <div class="project-img-placeholder" style="background: linear-gradient(45deg, #311042, #581c87);"></div>
                 <div class="project-info">
@@ -617,18 +608,16 @@
         </div>
     </section>
 
-    <!-- قسم الاتصال -->
     <section id="contact">
         <h2 class="section-title">ابدأ مشروعك الآن</h2>
         <div class="contact-container">
             
-            <!-- روابط الاتصال المباشرة المحدثة ببياناتك -->
             <div class="direct-contact-info">
                 <a href="mailto:jackzzmah@gmail.com" class="info-item">
                     <i class="fas fa-envelope"></i>
                     <span>jackzzmah@gmail.com</span>
                 </a>
-                <a href="https://wa.me/201103994188" target="_blank" class="info-item wp-info">
+                <a href="https://api.whatsapp.com/send?phone=201103994188" target="_blank" class="info-item wp-info">
                     <i class="fab fa-whatsapp"></i>
                     <span>+201103994188</span>
                 </a>
@@ -652,14 +641,11 @@
         </div>
     </section>
 
-    <!-- الفوتر -->
     <footer>
-        <p>&copy; 2026 jacoding | تم التطوير والبرمجة بواسطة المالك البرمجي jackzzmah@gmail.com</p>
+        <p>&copy; 2026 jacoding | جميع الحقوق محفوظة لـ jackzzmah@gmail.com</p>
     </footer>
 
-    <!-- السكريبت الخاص بالتفاعلية والفلترة والدعم لشاشات الموبايل -->
     <script>
-        // تفعيل قائمة الموبايل الهامبرغر
         const menuBtn = document.getElementById('menuBtn');
         const navLinks = document.getElementById('navLinks');
 
@@ -667,7 +653,6 @@
             navLinks.classList.toggle('active');
         });
 
-        // إغلاق القائمة عند الضغط على أي رابط في الموبايل
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
@@ -676,7 +661,6 @@
             });
         });
 
-        // نظام الفلترة الذكي لمعرض الأعمال بدون تحميل الصفحة
         const filterButtons = document.querySelectorAll('.filter-btn');
         const portfolioItems = document.querySelectorAll('.portfolio-item');
 
